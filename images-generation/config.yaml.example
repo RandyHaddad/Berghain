@@ -1,0 +1,47 @@
+scenario: 1
+output_dir: ./output
+override: false
+total_images: 64            # Minimum useful set is 2^n (computed from attributes)
+
+seed: 42                    # For reproducible celeb assignment and shuffling
+concurrency: 3              # Max parallel image requests
+retry:
+  attempts: 3
+  base_seconds: 1.0
+  max_seconds: 8.0
+
+image:
+  size: 1024x1024           # 1024x1024 | 1024x1536 | 1536x1024 | auto
+  format: webp              # webp/png/jpg; prefer webp
+  model: gpt-image-1        # OpenAI model to use for images
+  attach_image_path: null   # Optional: path to a reference image to attach
+  background_image_path: null   # Optional: base background image to keep fixed (edits)
+  background_mask_box: null     # Optional: [x,y,w,h] editable region; builds a mask and a preview overlay
+  background_mask_path: null    # Optional: PNG mask (alpha=0 editable); overrides mask box if provided
+  quality: high                 # Optional: low|medium|high|auto
+  input_fidelity: high          # Optional (edits): low|high|auto
+  lock_background_pixels: true  # Re-composite original background outside mask after edit
+  mask_inset_px: 8              # Shrink the transparent box to avoid edge bleed
+  style: "exaggerated caricature, bold lines, high contrast, consistent character sheet"
+  background: "plain dark background, subtle club lighting"
+  framing: "waist-up portrait, facing camera, slight 3/4 angle"
+  negative: "no logos, no brand names, no text overlays"
+  note: ""  # Optional: appended to the prompt for extra guidance
+
+# You can change attributes at will; order matters for bit-coding and filenames.
+attributes:
+  underground_veteran:
+    visual: "techno underground vibe, dark clubwear, patches"
+  international:
+    visual: "small globe or multiple tiny world flags motif"
+  fashion_forward:
+    visual: "runway-ready avant-garde outfit"
+  queer_friendly:
+    visual: "subtle rainbow accent or pride pin"
+  vinyl_collector:
+    visual: "holding a vinyl record"
+  german_speaker:
+    visual: "small German flag pin"
+
+celebrities:
+  - "Roy Lee from Cluely"

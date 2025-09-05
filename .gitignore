@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.local
+frontend/.env
+backend/.env
+dist/
+*.sqlite3
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+images-generation/output/
