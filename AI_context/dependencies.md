@@ -23,6 +23,7 @@ graph TD
 graph TD
     main_tsx[src/main.tsx] --> App
     App --> api_ts
+    App --> admitted_counts[(admittedByAttribute)]
     App --> ConstraintBar
     App --> PersonCard
     App --> VenueOverview
@@ -34,6 +35,7 @@ graph TD
     VenueOverview --> types_ts
     StrategyControls --> types_ts
     PlaybackControls --> types_ts
+    admitted_counts --> api_ts
 ```
 
 ## Images Generation Modules

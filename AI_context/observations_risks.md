@@ -1,5 +1,11 @@
 # Observations & Risks
 
+- Events pagination bug fixed: frontend now fetches the last 2000 events instead of offset=0, avoiding a stale event list beyond 2000 processed.
+- Consider adding `total` to `GET /runs/{id}/events` to compute offsets without relying on `admitted+rejected`.
+- Provide server-side aggregates for rejected-by-attribute and other metrics to avoid client-side scans.
+- Optimization applied: `StepResponse` now includes `admittedByAttribute`, removing an extra frontend request per step. For further scale, consider persisting counters incrementally per run.
+- Potential optimizations: compute admitted counts via a single SQL query (`GROUP BY`), or maintain a materialized counter table.
+
 - **Tests failing**: Running `pytest` in `backend` fails because the `app` package is not on `PYTHONPATH`, and `test_person_index_order.py` is missing `import pytest`. Tests would need path configuration and imports to run.
 - **Pending person coupling**: `Run` model caches a `pending_person_index` and attributes; API requires exact match. Any mismatch results in `409`, which tightly couples backend state to external API flow.
 - **Strategy enumeration**: `decide_accept` in `service_logic.py` uses string matching. Adding new strategies requires manual mapping and lacks validation for unknown names.

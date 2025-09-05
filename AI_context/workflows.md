@@ -1,5 +1,9 @@
 # End-to-End Workflows
 
+## Updates (latest)
+- Constraint bars now use server-side admitted-by-attribute counts for full-run accuracy.
+- Events UI reloads the latest window (last 2000) using offset/limit instead of always offset=0.
+
 ## Start a New Run
 1. **Frontend**: User selects a scenario and clicks *New Game* (`App.tsx`).
 2. **API Call**: `api.newRun` sends `POST /api/runs/new` with scenario.

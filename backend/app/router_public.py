@@ -24,6 +24,7 @@ from .schemas import (
     AutoStepRequest,
     EventOut,
     ExportResponse,
+    AdmittedByAttributeResponse,
     NewRunRequest,
     NextPerson,
     EventsPage,
@@ -213,10 +214,13 @@ async def step_run(
             pending_attributes_json=(json.dumps(next_p["attributes"]) if next_p else None),
         )
 
+        # Compute updated admitted-by-attribute for convenience
+        counts = await count_admitted_by_attribute(session, run_id)
         return StepResponse(
             run=_run_to_summary(run),
             event=_event_to_out(ev),
             nextPerson=(NextPerson(**next_p) if next_p else None),
+            admittedByAttribute=counts,
         )
 
 
@@ -330,10 +334,13 @@ async def auto_step_run(
             pending_attributes_json=(json.dumps(next_p["attributes"]) if next_p else None),
         )
 
+        # Compute updated admitted-by-attribute for convenience
+        counts = await count_admitted_by_attribute(session, run_id)
         return StepResponse(
             run=_run_to_summary(run),
             event=_event_to_out(ev),
             nextPerson=(NextPerson(**next_p) if next_p else None),
+            admittedByAttribute=counts,
         )
 
 
@@ -381,3 +388,12 @@ async def export_run(run_id: str, session: AsyncSession = Depends(get_session)):
         run=_run_to_summary(run),
         events=[_event_to_out(e) for e in events],
     )
+
+
+@router.get("/runs/{run_id}/admitted-by-attribute", response_model=AdmittedByAttributeResponse)
+async def get_admitted_by_attribute(run_id: str, session: AsyncSession = Depends(get_session)):
+    run = await get_run(session, run_id)
+    if not run:
+        raise HTTPException(status_code=404, detail="run not found")
+    counts = await count_admitted_by_attribute(session, run_id)
+    return {"counts": counts}

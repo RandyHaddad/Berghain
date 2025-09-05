@@ -40,6 +40,9 @@ export type StepResponse = {
   run: RunSummary
   event?: EventOut | null
   nextPerson?: NextPerson | null
+  admittedByAttribute?: Record<string, number>
 }
 
 export type EventsPage = { items: EventOut[]; offset: number; limit: number }
+
+export type AdmittedByAttributeResponse = { counts: Record<string, number> }

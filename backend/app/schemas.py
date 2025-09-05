@@ -60,6 +60,7 @@ class StepResponse(BaseModel):
     run: RunSummary
     event: Optional[EventOut] = None
     nextPerson: Optional[NextPerson] = None
+    admittedByAttribute: Dict[str, int] | None = None
 
 
 class EventsPage(BaseModel):
@@ -71,3 +72,7 @@ class EventsPage(BaseModel):
 class ExportResponse(BaseModel):
     run: RunSummary
     events: List[EventOut]
+
+
+class AdmittedByAttributeResponse(BaseModel):
+    counts: Dict[str, int]

@@ -1,4 +1,4 @@
-import { AutoStepRequest, EventsPage, RunSummary, StepRequest, StepResponse } from './types'
+import { AutoStepRequest, EventsPage, RunSummary, StepRequest, StepResponse, AdmittedByAttributeResponse } from './types'
 
 const BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api'
 
@@ -43,5 +43,8 @@ export const api = {
     })
     return j(res)
   },
+  async admittedByAttribute(runId: string): Promise<AdmittedByAttributeResponse> {
+    const res = await fetch(`${BASE}/runs/${runId}/admitted-by-attribute`)
+    return j(res)
+  },
 }
-

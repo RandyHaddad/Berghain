@@ -1,5 +1,10 @@
 # File Summaries
 
+## Updates (latest)
+- Added backend endpoint `GET /api/runs/{id}/admitted-by-attribute` (router_public.py) and schema `AdmittedByAttributeResponse` (schemas.py).
+- Frontend `lib/api.ts` now exposes `admittedByAttribute(runId)` and `types.ts` defines its response type.
+- `App.tsx` now fetches the last 2000 events using offset/limit and uses server-side admitted-by-attribute counts for constraint bars.
+
 ## Root
 - **README.md** – high level project overview and setup instructions for backend and frontend.
 - **render.yaml** – Render deployment configuration for backend, including environment variables and persistent disk.

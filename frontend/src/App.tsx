@@ -12,13 +12,24 @@ function App() {
   const [run, setRun] = useState<RunSummary | null>(null)
   const [nextPerson, setNextPerson] = useState<NextPerson | null>(null)
   const [events, setEvents] = useState<EventOut[]>([])
+  const [admittedByAttr, setAdmittedByAttr] = useState<Record<string, number>>({})
   const [loading, setLoading] = useState(false)
   const [auto, setAuto] = useState(false)
   const [strategy, setStrategy] = useState<string>('greedy_tightness')
 
-  const loadEvents = useCallback(async (runId: string) => {
-    const page = await api.listEvents(runId, 0, 2000)
-    setEvents(page.items)
+  const loadEvents = useCallback(
+    async (runId: string, totalCount?: number) => {
+      const limit = 2000
+      const offset = Math.max(0, (totalCount ?? 0) - limit)
+      const page = await api.listEvents(runId, offset, limit)
+      setEvents(page.items)
+    },
+    []
+  )
+
+  const loadAdmittedCounts = useCallback(async (runId: string) => {
+    const res = await api.admittedByAttribute(runId)
+    setAdmittedByAttr(res.counts || {})
   }, [])
 
   const startNew = useCallback(async () => {
@@ -49,7 +60,13 @@ function App() {
       })
       setRun(res.run)
       setNextPerson(res.nextPerson || null)
-      await loadEvents(run.id)
+      const total = res.run.admittedCount + res.run.rejectedCount
+      await loadEvents(res.run.id, total)
+      if (res.admittedByAttribute) {
+        setAdmittedByAttr(res.admittedByAttribute)
+      } else {
+        await loadAdmittedCounts(res.run.id)
+      }
     },
     [run, nextPerson, loadEvents]
   )
@@ -67,7 +84,13 @@ function App() {
         const res = await api.autoStep(run.id, { personIndex: index, strategy })
         setRun(res.run)
         setNextPerson(res.nextPerson || null)
-        await loadEvents(run.id)
+        const total = res.run.admittedCount + res.run.rejectedCount
+        await loadEvents(res.run.id, total)
+        if (res.admittedByAttribute) {
+          setAdmittedByAttr(res.admittedByAttribute)
+        } else {
+          await loadAdmittedCounts(res.run.id)
+        }
         if (res.run.status !== 'running') setAuto(false)
         if (res.run.admittedCount >= res.run.capacityRequired) setAuto(false)
         if (res.run.rejectedCount >= 20000) setAuto(false)
@@ -84,17 +107,8 @@ function App() {
     }
   }, [auto, run, nextPerson, loadEvents])
 
-  const countsByAttr = useMemo(() => {
-    const counts: Record<string, number> = {}
-    for (const ev of events) {
-      if (ev.accepted) {
-        for (const [k, v] of Object.entries(ev.attributes)) {
-          if (v) counts[k] = (counts[k] || 0) + 1
-        }
-      }
-    }
-    return counts
-  }, [events])
+  // Use server-side accurate admitted counts across the whole run
+  const countsByAttr = admittedByAttr
 
   const efficiency = useMemo(() => {
     if (!run) return 0
@@ -204,7 +218,14 @@ function App() {
                 onStrategyChange={setStrategy}
               />
 
-              <PlaybackControls runId={run.id} onReload={() => loadEvents(run.id)} />
+              <PlaybackControls
+                runId={run.id}
+                onReload={async () => {
+                  const total = run.admittedCount + run.rejectedCount
+                  await loadEvents(run.id, total)
+                  await loadAdmittedCounts(run.id)
+                }}
+              />
             </div>
           </div>
         </>
