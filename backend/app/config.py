@@ -39,7 +39,7 @@ def load_settings() -> Settings:
     # Support .env in backend root or repo root
     # We keep it simple: rely on environment variables if present
     return Settings(
-        PLAYER_ID=os.getenv("PLAYER_ID", "52f442c7-f52a-4f71-a671-0a127aaeb1ae"),
+        PLAYER_ID=os.getenv("PLAYER_ID", "ea8c947c-c66c-4951-9b0e-ccbea6705d7a"),
         EXTERNAL_API_BASE=os.getenv("EXTERNAL_API_BASE", "https://berghain.challenges.listenlabs.ai"),
         DATABASE_URL=os.getenv("DATABASE_URL", "sqlite:///./data/db.sqlite3"),
         CORS_ORIGINS=os.getenv("CORS_ORIGINS", "http://localhost:5173"),
