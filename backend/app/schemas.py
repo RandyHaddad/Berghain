@@ -76,3 +76,31 @@ class ExportResponse(BaseModel):
 
 class AdmittedByAttributeResponse(BaseModel):
     counts: Dict[str, int]
+
+
+# V2 Schemas for new features
+class ProfileResponse(BaseModel):
+    guest_id: str
+    display_name: str
+
+
+class UpdateDisplayNameRequest(BaseModel):
+    display_name: str
+
+
+class LeaderboardEntry(BaseModel):
+    name: str
+    scenarios_completed: int
+    total_rejections: int
+    last_completion: str
+    best_run_id: Optional[str] = None
+
+
+class LeaderboardResponse(BaseModel):
+    entries: List[LeaderboardEntry]
+
+
+class EnhancedAutoStepRequest(BaseModel):
+    personIndex: int
+    strategy: str | None = None
+    delayMs: int | None = None

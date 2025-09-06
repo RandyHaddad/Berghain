@@ -23,6 +23,7 @@ async def init_db() -> None:
         os.makedirs("./data", exist_ok=True)
     # Import models here to register metadata
     from . import models  # noqa: F401
+    from . import models_v2  # noqa: F401
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 

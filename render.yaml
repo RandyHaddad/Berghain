@@ -17,5 +17,5 @@ services:
       - key: EXTERNAL_API_BASE
         value: https://berghain.challenges.listenlabs.ai
       - key: CORS_ORIGINS
-        value: https://YOUR_FRONTEND_DOMAIN,http://localhost:5173
+        value: https://YOUR_FRONTEND_DOMAIN,http://localhost:5173,http://localhost:5174
 

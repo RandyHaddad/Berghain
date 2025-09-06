@@ -1,0 +1,15 @@
+{
+  "name": "berghain-challenge",
+  "version": "1.0.0",
+  "description": "Berghain Challenge - Venue Admission Simulation",
+  "scripts": {
+    "gen:manifests": "tsx scripts/generate-manifests.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "frontend-2"
+  ]
+}

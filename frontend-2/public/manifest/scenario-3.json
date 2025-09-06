@@ -1,0 +1,218 @@
+{
+  "scenario": 3,
+  "mapping": {
+    "UV1_I0_FF0_QF0_VC0_GS1 copy": [
+      "alfred_wahlforss__UV1_I0_FF0_QF0_VC0_GS1 copy.webp"
+    ],
+    "UV1_I0_FF0_QF0_VC0_GS1": [
+      "alfred_wahlforss__UV1_I0_FF0_QF0_VC0_GS1.webp",
+      "donald-trump__UV1_I0_FF0_QF0_VC0_GS1.webp",
+      "sven-marquardt-berghain-bouncer__UV1_I0_FF0_QF0_VC0_GS1.webp"
+    ],
+    "UV1_I1_FF0_QF0_VC0_GS1": [
+      "alfred_wahlforss__UV1_I1_FF0_QF0_VC0_GS1.webp",
+      "nancy-pelosi__UV1_I1_FF0_QF0_VC0_GS1.webp"
+    ],
+    "UV0_I1_FF0_QF1_VC1_GS0": [
+      "andrew-tate__UV0_I1_FF0_QF1_VC1_GS0.webp"
+    ],
+    "UV0_I1_FF1_QF0_VC0_GS0": [
+      "andrew-tate__UV0_I1_FF1_QF0_VC0_GS0.webp"
+    ],
+    "UV0_I0_FF0_QF1_VC1_GS1": [
+      "angela-merkel__UV0_I0_FF0_QF1_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF1_QF0_VC0_GS1": [
+      "angela-merkel__UV1_I0_FF1_QF0_VC0_GS1.webp"
+    ],
+    "UV0_I0_FF0_QF0_VC0_GS0": [
+      "astronomer-ceo__UV0_I0_FF0_QF0_VC0_GS0.webp",
+      "ishowspeed__UV0_I0_FF0_QF0_VC0_GS0.webp",
+      "neel-shanmugam-from-cluely__UV0_I0_FF0_QF0_VC0_GS0.webp",
+      "randy__UV0_I0_FF0_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV0_I0_FF0_QF0_VC0_GS0.webp"
+    ],
+    "UV0_I0_FF1_QF0_VC0_GS0": [
+      "astronomer-ceo__UV0_I0_FF1_QF0_VC0_GS0.webp",
+      "donald-trump__UV0_I0_FF1_QF0_VC0_GS0.webp",
+      "randy__UV0_I0_FF1_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV0_I0_FF1_QF0_VC0_GS0.webp"
+    ],
+    "UV0_I1_FF0_QF0_VC0_GS0": [
+      "astronomer-ceo__UV0_I1_FF0_QF0_VC0_GS0.webp",
+      "kai-cenat__UV0_I1_FF0_QF0_VC0_GS0.webp",
+      "neel-shanmugam-from-cluely__UV0_I1_FF0_QF0_VC0_GS0.webp",
+      "randy__UV0_I1_FF0_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV0_I1_FF0_QF0_VC0_GS0.webp",
+      "sydney-sweeney__UV0_I1_FF0_QF0_VC0_GS0.webp"
+    ],
+    "UV1_I0_FF0_QF0_VC0_GS0": [
+      "astronomer-ceo__UV1_I0_FF0_QF0_VC0_GS0.webp",
+      "jenna-ortega__UV1_I0_FF0_QF0_VC0_GS0.webp",
+      "neel-shanmugam-from-cluely__UV1_I0_FF0_QF0_VC0_GS0.webp",
+      "randy__UV1_I0_FF0_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV1_I0_FF0_QF0_VC0_GS0.webp"
+    ],
+    "UV1_I0_FF1_QF0_VC0_GS0": [
+      "astronomer-ceo__UV1_I0_FF1_QF0_VC0_GS0.webp",
+      "randy__UV1_I0_FF1_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV1_I0_FF1_QF0_VC0_GS0.webp",
+      "steve-from-minecraft__UV1_I0_FF1_QF0_VC0_GS0.webp"
+    ],
+    "UV1_I1_FF0_QF0_VC0_GS0": [
+      "astronomer-ceo__UV1_I1_FF0_QF0_VC0_GS0.webp",
+      "mark-zuckerberg__UV1_I1_FF0_QF0_VC0_GS0.webp",
+      "randy__UV1_I1_FF0_QF0_VC0_GS0.webp",
+      "roy-lee-from-cluely__UV1_I1_FF0_QF0_VC0_GS0.webp",
+      "sydney-sweeney__UV1_I1_FF0_QF0_VC0_GS0.webp"
+    ],
+    "UV0_I1_FF1_QF0_VC0_GS1": [
+      "bojack-horseman__UV0_I1_FF1_QF0_VC0_GS1.webp"
+    ],
+    "UV0_I1_FF1_QF1_VC1_GS1": [
+      "bojack-horseman__UV0_I1_FF1_QF1_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF0_QF0_VC1_GS0": [
+      "bojack-horseman__UV1_I0_FF0_QF0_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF1_QF1_VC1_GS1": [
+      "bojack-horseman__UV1_I1_FF1_QF1_VC1_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF1_VC0_GS1": [
+      "donald-trump__UV0_I0_FF1_QF1_VC0_GS1.webp"
+    ],
+    "UV1_I1_FF0_QF0_VC1_GS0": [
+      "donald-trump__UV1_I1_FF0_QF0_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF0_QF0_VC1_GS1": [
+      "donald-trump__UV1_I1_FF0_QF0_VC1_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF1_VC0_GS0": [
+      "elon-musk__UV0_I0_FF1_QF1_VC0_GS0.webp"
+    ],
+    "UV0_I1_FF1_QF1_VC0_GS1": [
+      "elon-musk__UV0_I1_FF1_QF1_VC0_GS1.webp"
+    ],
+    "UV1_I1_FF0_QF1_VC1_GS1": [
+      "elon-musk__UV1_I1_FF0_QF1_VC1_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF1_VC1_GS0": [
+      "emma-watson__UV0_I0_FF1_QF1_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF1_QF1_VC0_GS0": [
+      "emma-watson__UV1_I1_FF1_QF1_VC0_GS0.webp"
+    ],
+    "UV1_I0_FF0_QF0_VC1_GS1": [
+      "florian-juengermann__UV1_I0_FF0_QF0_VC1_GS1.webp",
+      "jenna-ortega__UV1_I0_FF0_QF0_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF1_QF0_VC1_GS1": [
+      "garry-tan__UV1_I0_FF1_QF0_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF1_QF1_VC0_GS0": [
+      "garry-tan__UV1_I0_FF1_QF1_VC0_GS0.webp"
+    ],
+    "UV1_I1_FF0_QF1_VC0_GS1": [
+      "garry-tan__UV1_I1_FF0_QF1_VC0_GS1.webp"
+    ],
+    "UV1_I0_FF0_QF1_VC0_GS1": [
+      "ishowspeed__UV1_I0_FF0_QF1_VC0_GS1.webp"
+    ],
+    "UV1_I1_FF1_QF0_VC0_GS1": [
+      "jenna-ortega__UV1_I1_FF1_QF0_VC0_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF1_VC1_GS1": [
+      "kai-cenat__UV0_I0_FF1_QF1_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF1_QF1_VC0_GS1": [
+      "kai-cenat__UV1_I0_FF1_QF1_VC0_GS1.webp"
+    ],
+    "UV0_I0_FF0_QF1_VC0_GS1": [
+      "larry-ellison__UV0_I0_FF0_QF1_VC0_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF0_VC1_GS0": [
+      "larry-ellison__UV0_I0_FF1_QF0_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF0_QF1_VC1_GS0": [
+      "mark-zuckerberg__UV1_I1_FF0_QF1_VC1_GS0.webp"
+    ],
+    "UV0_I1_FF0_QF0_VC1_GS0": [
+      "mrbeast__UV0_I1_FF0_QF0_VC1_GS0.webp"
+    ],
+    "UV1_I0_FF0_QF1_VC1_GS0": [
+      "mrbeast__UV1_I0_FF0_QF1_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF1_QF1_VC0_GS1": [
+      "mrbeast__UV1_I1_FF1_QF1_VC0_GS1.webp"
+    ],
+    "UV1_I0_FF1_QF0_VC1_GS0": [
+      "nancy-pelosi__UV1_I0_FF1_QF0_VC1_GS0.webp"
+    ],
+    "UV0_I0_FF0_QF0_VC0_GS1": [
+      "peter-thiel__UV0_I0_FF0_QF0_VC0_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF0_VC1_GS1": [
+      "peter-thiel__UV0_I0_FF1_QF0_VC1_GS1.webp"
+    ],
+    "UV0_I1_FF1_QF0_VC1_GS0": [
+      "peter-thiel__UV0_I1_FF1_QF0_VC1_GS0.webp"
+    ],
+    "UV0_I0_FF0_QF1_VC0_GS0": [
+      "pokimane__UV0_I0_FF0_QF1_VC0_GS0.webp"
+    ],
+    "UV0_I1_FF0_QF1_VC0_GS1": [
+      "pokimane__UV0_I1_FF0_QF1_VC0_GS1.webp"
+    ],
+    "UV0_I1_FF0_QF1_VC1_GS1": [
+      "rick-sanchez__UV0_I1_FF0_QF1_VC1_GS1.webp"
+    ],
+    "UV0_I1_FF1_QF1_VC1_GS0": [
+      "rick-sanchez__UV0_I1_FF1_QF1_VC1_GS0.webp"
+    ],
+    "UV1_I1_FF0_QF1_VC0_GS0": [
+      "rick-sanchez__UV1_I1_FF0_QF1_VC0_GS0.webp"
+    ],
+    "UV0_I1_FF0_QF1_VC0_GS0": [
+      "sam-altman__UV0_I1_FF0_QF1_VC0_GS0.webp"
+    ],
+    "UV1_I0_FF1_QF1_VC1_GS0": [
+      "sam-altman__UV1_I0_FF1_QF1_VC1_GS0.webp"
+    ],
+    "UV1_I0_FF1_QF1_VC1_GS1": [
+      "sam-altman__UV1_I0_FF1_QF1_VC1_GS1.webp"
+    ],
+    "UV0_I0_FF1_QF0_VC0_GS1": [
+      "steve-from-minecraft__UV0_I0_FF1_QF0_VC0_GS1.webp"
+    ],
+    "UV1_I1_FF1_QF0_VC1_GS1": [
+      "steve-from-minecraft__UV1_I1_FF1_QF0_VC1_GS1.webp"
+    ],
+    "UV0_I0_FF0_QF0_VC1_GS0": [
+      "sydney-sweeney__UV0_I0_FF0_QF0_VC1_GS0.webp"
+    ],
+    "UV0_I1_FF1_QF0_VC1_GS1": [
+      "sydney-sweeney__UV0_I1_FF1_QF0_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF0_QF1_VC1_GS1": [
+      "sydney-sweeney__UV1_I0_FF0_QF1_VC1_GS1.webp"
+    ],
+    "UV0_I1_FF0_QF0_VC1_GS1": [
+      "ursula-von-der-leyen__UV0_I1_FF0_QF0_VC1_GS1.webp"
+    ],
+    "UV1_I1_FF1_QF0_VC0_GS0": [
+      "ursula-von-der-leyen__UV1_I1_FF1_QF0_VC0_GS0.webp"
+    ],
+    "UV1_I1_FF1_QF0_VC1_GS0": [
+      "ursula-von-der-leyen__UV1_I1_FF1_QF0_VC1_GS0.webp"
+    ],
+    "UV0_I0_FF0_QF0_VC1_GS1": [
+      "xqc__UV0_I0_FF0_QF0_VC1_GS1.webp"
+    ],
+    "UV1_I0_FF0_QF1_VC0_GS0": [
+      "xqc__UV1_I0_FF0_QF1_VC0_GS0.webp"
+    ],
+    "UV1_I1_FF1_QF1_VC1_GS0": [
+      "xqc__UV1_I1_FF1_QF1_VC1_GS0.webp"
+    ]
+  }
+}

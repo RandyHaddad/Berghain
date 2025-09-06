@@ -6,6 +6,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .db import init_db
 from .router_public import router as public_router
+from .router_v2 import router_v2
+
+# Import models to register with SQLAlchemy Base
+from . import models  # noqa: F401
+from . import models_v2  # noqa: F401
 
 
 app = FastAPI(title="Berghain Challenge Backend", version="0.1.0")
@@ -27,4 +32,5 @@ async def on_startup() -> None:
 
 
 app.include_router(public_router)
+app.include_router(router_v2)
 

@@ -1,7 +1,7 @@
 scenario: 3
 output_dir: ./output
 override: false
-total_images: 64            # Minimum useful set is 2^n (computed from attributes)
+total_images: 4            # Minimum useful set is 2^n (computed from attributes)
 
 seed: 12                    # For reproducible celeb assignment and shuffling
 concurrency: 3              # Max parallel image requests
@@ -14,7 +14,7 @@ image:
   size: 1024x1024                 # 256, 512, 1024
   format: webp              # webp/png/jpg; prefer webp
   model: gpt-image-1        # OpenAI model to use for images
-  attach_image_path: null   # Optional: path to a reference image to attach
+  attach_image_path: attach-image\image.png   # Optional: path to a reference image to attach
   background_image_path: background-image\ChatGPT Image Sep 4, 2025, 02_42_59 PM.png  # Optional: path to a background image to use
   quality: auto
   input_fidelity: low
@@ -22,10 +22,13 @@ image:
   style: "satirical caricature, bold lines, high contrast, fresh vibrant look"
   framing: "waist-up portrait, facing camera, slight 3/4 angle, the position of the figure must be to the left"
   # Optional: free-form note appended to the prompt for extra guidance
-  note: ""
+  note: "Make Sydney Sweeney wear the Jeans outfit that is in the reference image"
 
-# Optional: attributes that must always be present (True) in every generated image
-  # - international  # uncomment to make international always True
+Optional: attributes that must always be present (True) in every generated image
+  - underground_veteran
+  - queer_friendly
+  - vinyl_collector
+  - german_speaker
 
 # You can change attributes at will; order matters for bit-coding and filenames.
 attributes:
@@ -44,27 +47,4 @@ attributes:
 
 celebrities:
 - "Sydney Sweeney"
-- "Donald Trump"
-- "IShowSpeed"
-- "XQC"
-- "MrBeast"
-- "Andrew Tate"
-- "Kai Cenat"
-- "Andressen Horowitz"
-- "Peter Thiel"
-- "Sam Altman"
-- "Elon Musk"
-- "Donald Trump"
-- "Bojack Horseman"
-- "Steve from Minecraft"
-- "Rick Sanchez"
-- "Angela Merkel"
-- "Larry Ellison"
-- "Mark Zuckerberg"
-- "Garry Tan"
-- "Emma Watson"
-- "Ursula von der Leyen"
-- "Nancy Pelosi"
-- "Pokimane"
-- "Jenna Ortega"
 

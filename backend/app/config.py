@@ -16,7 +16,7 @@ class Settings(BaseModel):
         description="SQLAlchemy database URL (sync-style)",
     )
     CORS_ORIGINS: str = Field(
-        default="http://localhost:5173",
+        default="http://localhost:5173,http://localhost:5174",
         description="Comma-separated origins allowed for CORS",
     )
     CAPACITY_REQUIRED: int = 1000
@@ -42,7 +42,7 @@ def load_settings() -> Settings:
         PLAYER_ID=os.getenv("PLAYER_ID", "ea8c947c-c66c-4951-9b0e-ccbea6705d7a"),
         EXTERNAL_API_BASE=os.getenv("EXTERNAL_API_BASE", "https://berghain.challenges.listenlabs.ai"),
         DATABASE_URL=os.getenv("DATABASE_URL", "sqlite:///./data/db.sqlite3"),
-        CORS_ORIGINS=os.getenv("CORS_ORIGINS", "http://localhost:5173"),
+        CORS_ORIGINS=os.getenv("CORS_ORIGINS", "http://localhost:5174"),
         CAPACITY_REQUIRED=int(os.getenv("CAPACITY_REQUIRED", "1000")),
     )
 
